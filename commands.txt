@@ -1,0 +1,4 @@
+MULTI
+GET buildno
+INCR buildno
+EXEC
