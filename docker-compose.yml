@@ -8,5 +8,11 @@ services:
     command: redis-server --appendonly yes
     volumes:
       - /var/tmp/redis:/data
-
+  redisCommander:
+    image: tenstartups/redis-commander
+    command: --redis-host redis
+    links:
+      - redis:redis
+    ports:
+      - "8081:8081"
 
